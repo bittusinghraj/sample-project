@@ -1,0 +1,47 @@
+:root{
+    --reqColor:#fa5b0f;
+}
+
+
+
+.aside .logo a::after{
+    border-right: 4px solid var(--reqColor);
+    border-bottom: 4px solid var(--reqColor);
+}
+.aside .logo a::before{
+    border-top: 4px solid var(--reqColor);
+    border-left: 4px solid var(--reqColor);
+}
+.portfolio .portfolio-filter button.active,
+body.dark .portfolio .portfolio-filter button.active,
+.contact .contact-info-item .icon .fa,
+.blog .blog-item-inner .blog-info .blog-tags a,
+.portfolio .portfolio-item .portfoilio-info .icon .fa,
+.lightbox .lightbox-controls .prev-item .fa,
+.lightbox .lightbox-controls .next-item .fa,
+.about .about-content .about-text h3 span,
+.service .service-item .service-item-inner .icon .fa,
+.aside .nav li a:hover,
+body.dark .aside .nav li a.active,
+body.dark .aside .nav li a:hover,
+.aside .nav li a.active{
+    color: var(--reqColor);
+}
+.btn,
+.service .service-item .service-item-inner:hover .icon,
+.blog .blog-item-inner .blog-img .blog-date,
+.about .about-content .skill .skill-item .progress .progress-in,
+.about .about-content .timeline .timeline-item::before,
+.about .about-content .timeline .timeline-dot,
+.aside .nav-toggle span,
+.aside .nav-toggle span::before,
+.aside .nav-toggle span::after,
+.section-title h2::before,
+.section-title h2::after,
+.home .intro .social-links a{
+    background-color: var(--reqColor);
+}
+body.dark .portfolio .portfolio-filter button.active,
+.portfolio .portfolio-filter button.active{
+    border-color: var(--reqColor);
+}
