@@ -90,6 +90,11 @@ input,textarea,select{
 }
 .main-content{
     padding-left: 270px;
+    background-color: #f2f2fc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .btn{
     padding: 12px 35px;
