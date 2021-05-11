@@ -88,3 +88,56 @@ const lightbox = document.querySelector('.lightbox'),
             toggleLightBox();
           }
       })
+
+// Nav list items########################################################
+    const nav = document.querySelector(".nav"),
+    navlist = nav.querySelectorAll("li"),
+    section=document.querySelectorAll(".section");
+    for (let i = 0; i < navlist.length; i++) {
+        // console.log(navlist[i]);
+        const a = navlist[i].querySelector("a")
+        a.addEventListener("click",function(){
+            for (let i = 0; i < section.length; i++) {
+                section[i].classList.remove("back-section")
+                
+            }
+            for (let j = 0; j < navlist.length; j++) {
+                if(navlist[j].querySelector("a").classList.contains("active")){
+                    section[j].classList.add("back-section")
+                }
+                navlist[j].querySelector("a").classList.remove("active")
+                
+            }
+            this.classList.add("active")
+            showSection(this);
+            if(window.innerWidth<1200){
+                asideSectionTogglerBtn();
+            }
+        })
+        
+    }
+    function showSection(element){
+        for (let i = 0; i < section.length; i++) {
+           section[i].classList.remove("active")
+            
+        }
+        const target= element.getAttribute("href").split("#")[1];
+        document.querySelector("#"+target).classList.add("active")
+        
+    }
+
+    const navToggleBtn= document.querySelector(".nav-toggle"),
+    aside = document.querySelector(".aside");
+    navToggleBtn.addEventListener("click",function(){
+        asideSectionTogglerBtn();
+        
+    })
+    function asideSectionTogglerBtn() {
+        aside.classList.toggle("open")
+        navToggleBtn.classList.toggle("open")
+        // section.classList.toggle("open")
+        for (let i = 0; i < section.length; i++) {
+            
+            section[i].classList.toggle("open")
+        }
+    }
