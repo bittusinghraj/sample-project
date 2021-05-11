@@ -12,6 +12,7 @@
     border-top: 4px solid var(--reqColor);
     border-left: 4px solid var(--reqColor);
 }
+.toggle-style-switcher .fa,
 .portfolio .portfolio-filter button.active,
 body.dark .portfolio .portfolio-filter button.active,
 .contact .contact-info-item .icon .fa,
